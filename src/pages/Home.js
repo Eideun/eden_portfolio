@@ -55,8 +55,8 @@ const Home = () => {
             <HomeStyles.Title>
                 <h1>FE개발자 유이든의 Portfolio입니다.</h1>
             </HomeStyles.Title>
-            <Cursor cursorPosition={cursorPosition} 
-                    clicked={clicked} />
+            <Cursor cursorPosition={cursorPosition} clicked={clicked} />
+                
         </HomeStyles.Container>
     );
 };

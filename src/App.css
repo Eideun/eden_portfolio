@@ -1,14 +1,18 @@
 @font-face {
     font-family: "fontBold";
-    src: url("./NotoSansKR/NotoSansKR-Bold.ttf") format("truetype");
+    src: url("./font/custom/SAOUITT-Bold.ttf") format("truetype");
   }
   
   @font-face {
     font-family: "fontMedium";
-    src: url("./NotoSansKR/NotoSansKR-SemiBold.ttf") format("truetype");
+    src: url("./font/custom/SAOUITT-Regular.ttf") format("truetype");
   }
   
   @font-face {
     font-family: "fontLight";
-    src: url("./NotoSansKR/NotoSansKR-Black.ttf") format("truetype");
+    src: url("./font/custom/SAOWelcomeTT-Regular.ttf") format("truetype");
+  }
+
+  .App {
+    font-family: "fontBold";
   }

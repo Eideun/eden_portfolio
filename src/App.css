@@ -13,6 +13,20 @@
     src: url("./font/custom/SAOWelcomeTT-Regular.ttf") format("truetype");
   }
 
+  a {
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+  }
+
+  a:link,
+  a:hover,
+  a:active {
+    text-decoration: none;
+    color: inherit;
+  }
+  
   .App {
-    font-family: "fontBold";
+    font-family: "fontMedium";
+    min-width: 800px;
   }

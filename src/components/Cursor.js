@@ -1,21 +1,21 @@
-import { CursorStyles } from "../styles/Cursor.styles"
+import React from 'react';
+import { CursorStyles } from "../styles/Cursor.styles";
 
 const Cursor = ({ cursorPosition, clicked }) => {
-  
-    return (
-      <CursorStyles.Cursor
-      style={{
+    const cursorStyle = {
         left: cursorPosition.left - 10,
         top: cursorPosition.top - 10,
         transform: `scale(${clicked.scale})`,
         background: `${clicked.backGround}`,
         filter: clicked.filter
-      }}
-      
-    >
-      
-      </CursorStyles.Cursor>
-    );
-  };
+    };
 
-export default Cursor
+    return (
+        <CursorStyles.Cursor
+            className="CursorWithBlendMode"
+            style={cursorStyle}
+        />
+    );
+};
+
+export default Cursor;

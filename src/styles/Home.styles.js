@@ -15,13 +15,14 @@ const Title = styled.div`
     color: white;
 
     h1 {
-        margin-top: 30vh;
         position: relative;
         font-size: 40px;
         overflow: hidden;
         white-space: nowrap;
         animation: typing 2000s steps(15000, end);
         font-size: 50px;
+        pointer-events: none;
+        user-select: none;
 
         &::after {
             content: '|';
@@ -46,36 +47,6 @@ const Title = styled.div`
     }
 `;
 
-const Nav = styled.nav`
-    width: 100%;
-    margin: 0 auto;
-    padding-top: 20px;
-    color: white;
-    display: flex;
-    justify-content: flex-end;
-
-    ul {
-        display: flex;
-        margin-top: 10px;
-    }
-            
-    li {
-        list-style: none;
-        font-size: 25px;
-        margin-right: 30px;
-    }
-
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
-`;
-
-const Wrapper = styled.div`
-    border: 2px solid white;
-    border-radius: 10px;
-`;
-
 const ButtonWrapper = styled.div`
     display: flex;
     justify-content: center;
@@ -91,11 +62,11 @@ const Button = styled.button`
     font-size: 20px;
 `
 
+
+
 export const HomeStyles = {
     Container,
     Title,
-    Nav,
-    Wrapper,
     Button,
     ButtonWrapper
 }

@@ -65,6 +65,7 @@ const Menu = styled.div`
   padding-bottom: 3px;
   transition: transform 0.3s;
   display: flex;
+  user-select: none;
 
   img {
     margin-left: 15px;
@@ -76,9 +77,6 @@ const Menu = styled.div`
     background: #F5C500;
     color: white;
     transform: scale(1.15);
-  }
-  &:active {
-    transform: translate3d(15px, 0, 0);
   }
 
 `;

@@ -80,7 +80,6 @@ const Menu = styled.div`
 
   &:active {
     transform: translate3d(15px, 0, 0)
-
   }
 `;
 

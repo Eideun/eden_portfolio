@@ -75,12 +75,12 @@ const Menu = styled.div`
   &:hover {
     background: #F5C500;
     color: white;
-    transform: scale(1.2);
+    transform: scale(1.15);
+  }
+  &:active {
+    transform: translate3d(15px, 0, 0);
   }
 
-  &:active {
-    transform: translate3d(15px, 0, 0)
-  }
 `;
 
 

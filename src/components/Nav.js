@@ -11,6 +11,7 @@ const Nav = ({ onClick }) => {
       });
       
   const [menuVisible, setMenuVisible] = useState(false);
+  const [menuActive, setMenuActive] = useState(false);
 
   const handleMenuClick = () => {
     if (!menuVisible) {

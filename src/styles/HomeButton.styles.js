@@ -11,7 +11,12 @@ const ButtonWrapper = styled.div`
         font-weight: 600;
         color: grey;
         background: #CCE5FF;
+        
+        &:hover {
+            background: white;
+        }
     }
+
 `
 
 

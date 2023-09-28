@@ -47,8 +47,6 @@ const MenuWrapper = styled.div`
     display: flex;
     flex-direction: column;
     margin-top: 10px;
-    visibility: hidden;
-    pointer-events: visiblePainted;
 `;
 
 const Menu = styled.div`
@@ -64,6 +62,7 @@ const Menu = styled.div`
   padding-top: 3px;
   padding-bottom: 3px;
   transition: transform 0.3s;
+  transform: translate3d(0, -500px, 0);
   display: flex;
   user-select: none;
 
@@ -80,8 +79,6 @@ const Menu = styled.div`
   }
 
 `;
-
-
 
 export const NavStyles = {
   Nav,

@@ -31,3 +31,7 @@
     min-width: 800px;
     cursor: none;
   }
+
+  body {
+    overflow-x: hidden;
+  }

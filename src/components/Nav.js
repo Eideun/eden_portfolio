@@ -85,10 +85,12 @@ const Nav = ({ onClick }) => {
   return (
     <NavStyles.Nav>
       <img id="menu" src="./menu.png" alt="메뉴" onClick={handleMenuClick}/>
-      <NavStyles.MenuWrapper style={{ visibility: menuVisible ? 'visible' : 'hidden' }}>
+      <NavStyles.MenuWrapper>
         <NavStyles.Menu1
           style={{
             transform: activeMenus.menu1 ? 'translate3d(10px, 0, 0)' : '',
+            transform: menuVisible? `translate3d(0,0,0) ` : `translate3d(0, -500px,0)`,
+            transition: menuVisible? 'transform 1.1s ease-in-out' : `transform 0.3s ease-in-out`,
             background: activeMenus.menu1 ? '#F5C500' : ''
           }} onClick={() => handleClicked('menu1')} onMouseEnter={handleHover}>
           <img src="./aboutme.ico" alt="Home"/>
@@ -97,6 +99,8 @@ const Nav = ({ onClick }) => {
         <NavStyles.Menu2 
            style={{
             transform: activeMenus.menu2 ? 'translate3d(10px, 0, 0)' : '',
+            transform: menuVisible? `translate3d(0,0,0) ` : `translate3d(0, -500px,0)`,
+            transition: menuVisible? 'transform 0.9s ease-in-out' : `transform 0.5s ease-in-out`,
             background: activeMenus.menu2 ? '#F5C500' : ''
           }} 
           onClick={() => handleClicked('menu2')} 
@@ -107,6 +111,8 @@ const Nav = ({ onClick }) => {
         <NavStyles.Menu3
           style={{
             transform: activeMenus.menu3 ? 'translate3d(10px, 0, 0)' : '',
+            transform: menuVisible? `translate3d(0,0,0) ` : `translate3d(0, -500px,0)`,
+            transition: menuVisible? 'transform 0.7s ease-in-out' : `transform 0.7s ease-in-out`,
             background: activeMenus.menu3 ? '#F5C500' : ''
           }}
           onClick={() => handleClicked('menu3')}
@@ -118,6 +124,8 @@ const Nav = ({ onClick }) => {
         <NavStyles.Menu4
           style={{
             transform: activeMenus.menu4 ? 'translate3d(10px, 0, 0)' : '',
+            transform: menuVisible? `translate3d(0,0,0) ` : `translate3d(0, -500px,0)`,
+            transition: menuVisible? 'transform 0.5s ease-in-out' : `transform 0.9s ease-in-out`,
             background: activeMenus.menu4 ? '#F5C500' : ''
           }}
           onClick={() => handleClicked('menu4')}
@@ -129,6 +137,8 @@ const Nav = ({ onClick }) => {
         <NavStyles.Menu5
           style={{
             transform: activeMenus.menu5 ? 'translate3d(10px, 0, 0)' : '',
+            transform: menuVisible? `translate3d(0,0,0) ` : `translate3d(0, -500px,0)`,
+            transition: menuVisible? 'transform 0.3s ease-in-out' : `transform 1,1s ease-in-out`,
             background: activeMenus.menu5 ? '#F5C500' : ''
           }}
           onClick={() => handleClicked('menu5')}

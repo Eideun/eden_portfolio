@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState,useRef } from 'react';
 import { NavStyles } from "../styles/Nav.styles";
+import Home from '../pages/Home';
+const Nav = () => {
 
-const Nav = ({ onClick }) => {
+
+
   const [audioState, setAudioState] = useState({
     slideOn: true,
     clicked: true,
@@ -18,6 +21,7 @@ const Nav = ({ onClick }) => {
     menu5: false
   });
 
+
   const handleMenuClick = () => {
     if (!menuVisible) {
       const audio = new Audio('./slideOn.mp3');
@@ -27,7 +31,6 @@ const Nav = ({ onClick }) => {
         ...prevState,
         slideOn: false
       }));
-
       setTimeout(() => {
         setAudioState(prevState => ({
           ...prevState,
@@ -36,6 +39,19 @@ const Nav = ({ onClick }) => {
       }, 1500);
     }
     setMenuVisible(prev => !prev);
+
+    if(!menuVisible) {
+      setActiveMenus((prev) => ({
+        ...prev,
+        menu1: false,
+        menu2: false,
+        menu3: false,
+        menu4: false,
+        menu5: false,
+      }))
+    }
+
+    
   };
 
   const handleClicked = (menu) => {
@@ -54,13 +70,10 @@ const Nav = ({ onClick }) => {
           clicked: true
         }));
       }, 300);
-      
-      if(menuVisible) {
-      setActiveMenus((prev) => ({
-        ...Object.fromEntries(Object.keys(prev).map((key) => [key, key === menu])),
-      }));
     }
-    }
+    setActiveMenus((prev) => ({
+      ...Object.fromEntries(Object.keys(prev).map((key) => [key, key === menu])),
+    }));
   };
 
   const handleHover = () => {
@@ -83,73 +96,36 @@ const Nav = ({ onClick }) => {
   };
 
   return (
-    <NavStyles.Nav>
+      <NavStyles.Navi>
       <img id="menu" src="./menu.png" alt="메뉴" onClick={handleMenuClick}/>
       <NavStyles.MenuWrapper>
-        <NavStyles.Menu1
-          style={{
-            transform: activeMenus.menu1 ? 'translate3d(10px, 0, 0)' : '',
-            transform: menuVisible? `translate3d(0,0,0) ` : `translate3d(0, -500px,0)`,
-            transition: menuVisible? 'transform 1.1s ease-in-out' : `transform 0.3s ease-in-out`,
-            background: activeMenus.menu1 ? '#F5C500' : ''
-          }} onClick={() => handleClicked('menu1')} onMouseEnter={handleHover}>
+        <NavStyles.Menu1 onClick={() => handleClicked('menu1') } onMouseEnter={handleHover}
+        menuVisible={menuVisible} activeMenus={activeMenus}>
           <img src="./aboutme.ico" alt="Home"/>
           <span>Home</span>
         </NavStyles.Menu1>
-        <NavStyles.Menu2 
-           style={{
-            transform: activeMenus.menu2 ? 'translate3d(10px, 0, 0)' : '',
-            transform: menuVisible? `translate3d(0,0,0) ` : `translate3d(0, -500px,0)`,
-            transition: menuVisible? 'transform 0.9s ease-in-out' : `transform 0.5s ease-in-out`,
-            background: activeMenus.menu2 ? '#F5C500' : ''
-          }} 
-          onClick={() => handleClicked('menu2')} 
-          onMouseEnter={handleHover}>
+        <NavStyles.Menu2 onClick={() => handleClicked('menu2')} onMouseEnter={handleHover}
+        menuVisible={menuVisible} activeMenus={activeMenus}>
           <img src="./aboutme.ico" alt="About Me"/>
           <span>About Me</span>
         </NavStyles.Menu2>
-        <NavStyles.Menu3
-          style={{
-            transform: activeMenus.menu3 ? 'translate3d(10px, 0, 0)' : '',
-            transform: menuVisible? `translate3d(0,0,0) ` : `translate3d(0, -500px,0)`,
-            transition: menuVisible? 'transform 0.7s ease-in-out' : `transform 0.7s ease-in-out`,
-            background: activeMenus.menu3 ? '#F5C500' : ''
-          }}
-          onClick={() => handleClicked('menu3')}
-          onMouseEnter={handleHover}
-        >
+        <NavStyles.Menu3 onClick={() => handleClicked('menu3')} onMouseEnter={handleHover}
+        menuVisible={menuVisible} activeMenus={activeMenus}>
           <img src="./skills.ico" alt="Stacks"/>
           <span>Stacks</span>
         </NavStyles.Menu3>
-        <NavStyles.Menu4
-          style={{
-            transform: activeMenus.menu4 ? 'translate3d(10px, 0, 0)' : '',
-            transform: menuVisible? `translate3d(0,0,0) ` : `translate3d(0, -500px,0)`,
-            transition: menuVisible? 'transform 0.5s ease-in-out' : `transform 0.9s ease-in-out`,
-            background: activeMenus.menu4 ? '#F5C500' : ''
-          }}
-          onClick={() => handleClicked('menu4')}
-          onMouseEnter={handleHover}
-        >
+        <NavStyles.Menu4 onClick={() => handleClicked('menu4')} onMouseEnter={handleHover}
+        menuVisible={menuVisible} activeMenus={activeMenus}>
           <img src="./works.ico" alt="Works"/>
           <span>Works</span>
         </NavStyles.Menu4>
-        <NavStyles.Menu5
-          style={{
-            transform: activeMenus.menu5 ? 'translate3d(10px, 0, 0)' : '',
-            transform: menuVisible? `translate3d(0,0,0) ` : `translate3d(0, -500px,0)`,
-            transition: menuVisible? 'transform 0.3s ease-in-out' : `transform 1,1s ease-in-out`,
-            background: activeMenus.menu5 ? '#F5C500' : ''
-          }}
-          onClick={() => handleClicked('menu5')}
-          onMouseEnter={handleHover}
-        >
+        <NavStyles.Menu5 onClick={() => handleClicked('menu5')} onMouseEnter={handleHover}
+        menuVisible={menuVisible} activeMenus={activeMenus}>
           <img src="./contact.ico" alt="Contact"/>
           <span>Contact</span>
         </NavStyles.Menu5>
       </NavStyles.MenuWrapper>
-    </NavStyles.Nav>
+    </NavStyles.Navi>
   );
 };
-
 export default Nav;

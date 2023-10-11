@@ -5,17 +5,29 @@ const Container = styled.div`
   height: 100vh;
   background-image: url("./bg.gif");
   background-size: 100%;
+
+  .message {
+    top: 93vh;
+    left: 49vw;
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 1.2px;
+    opacity: 0.8;
+    user-select: none;
+    margin-left: 15px;
+  }
 `;
 
 const Title = styled.div`
   display: flex;
-  position: relative;
   margin: 0 auto;
   justify-content: center;
   text-align: center;
   color: white;
 
   h1 {
+    margin-top: 40vh;
     position: relative;
     font-size: 40px;
     overflow: hidden;
@@ -50,6 +62,7 @@ const Title = styled.div`
   @media (max-width: 800px) {
     h1 {
       font-size: 30px;
+      margin-top: 50px;
       transition: transform 0.4s ease;
     }
     
@@ -57,24 +70,41 @@ const Title = styled.div`
   }
 `;
 
-const ButtonWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
-`;
+const Scroll = styled.div`
+position: absolute;
+width: 35px;
+height: 35px;
+top: 90vh;
+left: 50vw;
+background-image: url("./scroll.png");
+background-size: 35px 35px;
+filter: invert(100%);
+animation: scrolldown 1300ms linear infinite;
 
-const Button = styled.button`
-  border: 1px solid gray;
-  border-radius: 8px;
-  width: 120px;
-  height: 40px;
-  font-weight: 900;
-  font-size: 20px;
-`;
+  @keyframes scrolldown {
+    0% {
+      top: 86vh;
+      opacity: 0;
+  }
+  50% {
+      top: 88vh;
+      opacity: 0.5;
+  }
+  100% {
+      top: 90vh;
+      opacity: 0;
+  }
+  }
+`
 
 export const HomeStyles = {
   Container,
   Title,
-  Button,
-  ButtonWrapper
+  Scroll1:styled(Scroll)`
+  animation: scrolldown 1300ms 650ms linear infinite;
+    animation-fill-mode: backwards;
+  `,
+  Scroll2:styled(Scroll)`
+  animation: scrolldown 1300ms linear infinite;
+  `
 };

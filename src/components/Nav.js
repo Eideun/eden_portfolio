@@ -1,10 +1,8 @@
-import React, { useState,useRef } from 'react';
+import React, { useState } from 'react';
 import { NavStyles } from "../styles/Nav.styles";
-import Home from '../pages/Home';
+import { Link } from 'react-scroll';
+
 const Nav = () => {
-
-
-
   const [audioState, setAudioState] = useState({
     slideOn: true,
     clicked: true,
@@ -50,8 +48,6 @@ const Nav = () => {
         menu5: false,
       }))
     }
-
-    
   };
 
   const handleClicked = (menu) => {
@@ -95,32 +91,57 @@ const Nav = () => {
     }
   };
 
+
   return (
-      <NavStyles.Navi>
+    <NavStyles.Navi>
       <img id="menu" src="./menu.png" alt="메뉴" onClick={handleMenuClick}/>
       <NavStyles.MenuWrapper>
-        <NavStyles.Menu1 onClick={() => handleClicked('menu1') } onMouseEnter={handleHover}
-        menuVisible={menuVisible} activeMenus={activeMenus}>
-          <img src="./aboutme.ico" alt="Home"/>
-          <span>Home</span>
-        </NavStyles.Menu1>
-        <NavStyles.Menu2 onClick={() => handleClicked('menu2')} onMouseEnter={handleHover}
-        menuVisible={menuVisible} activeMenus={activeMenus}>
-          <img src="./aboutme.ico" alt="About Me"/>
-          <span>About Me</span>
-        </NavStyles.Menu2>
-        <NavStyles.Menu3 onClick={() => handleClicked('menu3')} onMouseEnter={handleHover}
-        menuVisible={menuVisible} activeMenus={activeMenus}>
+        <Link to="home" smooth={true} duration={200}>
+          <NavStyles.Menu1
+            onClick={() => handleClicked('menu1')}
+            onMouseEnter={handleHover}
+            menuVisible={menuVisible}
+            activeMenus={activeMenus}
+          >
+            <img src="./aboutme.ico" alt="Home"/>
+            <span>Home</span>
+          </NavStyles.Menu1>
+        </Link>
+        <Link to="aboutMe" smooth={true} duration={200}>
+          <NavStyles.Menu2
+            onClick={() => handleClicked('menu2')}
+            onMouseEnter={handleHover}
+            menuVisible={menuVisible}
+            activeMenus={activeMenus}
+          >
+            <img src="./aboutme.ico" alt="About Me"/>
+            <span>About Me</span>
+          </NavStyles.Menu2>
+        </Link>
+        <NavStyles.Menu3
+          onClick={() => handleClicked('menu3')}
+          onMouseEnter={handleHover}
+          menuVisible={menuVisible}
+          activeMenus={activeMenus}
+        >
           <img src="./skills.ico" alt="Stacks"/>
           <span>Stacks</span>
         </NavStyles.Menu3>
-        <NavStyles.Menu4 onClick={() => handleClicked('menu4')} onMouseEnter={handleHover}
-        menuVisible={menuVisible} activeMenus={activeMenus}>
+        <NavStyles.Menu4
+          onClick={() => handleClicked('menu4')}
+          onMouseEnter={handleHover}
+          menuVisible={menuVisible}
+          activeMenus={activeMenus}
+        >
           <img src="./works.ico" alt="Works"/>
           <span>Works</span>
         </NavStyles.Menu4>
-        <NavStyles.Menu5 onClick={() => handleClicked('menu5')} onMouseEnter={handleHover}
-        menuVisible={menuVisible} activeMenus={activeMenus}>
+        <NavStyles.Menu5
+          onClick={() => handleClicked('menu5')}
+          onMouseEnter={handleHover}
+          menuVisible={menuVisible}
+          activeMenus={activeMenus}
+        >
           <img src="./contact.ico" alt="Contact"/>
           <span>Contact</span>
         </NavStyles.Menu5>
@@ -128,4 +149,5 @@ const Nav = () => {
     </NavStyles.Navi>
   );
 };
+
 export default Nav;

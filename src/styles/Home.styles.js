@@ -3,8 +3,7 @@ import styled from "styled-components";
 const Container = styled.div`
   width: 100vw;
   height: 100vh;
-  background-image: url("./bg.gif");
-  background-size: 100%;
+  background: #141414;
 
   .message {
     top: 93vh;
@@ -17,6 +16,7 @@ const Container = styled.div`
     user-select: none;
     margin-left: 15px;
   }
+
 `;
 
 const Title = styled.div`
@@ -25,7 +25,7 @@ const Title = styled.div`
   justify-content: center;
   text-align: center;
   color: white;
-
+  
   h1 {
     margin-top: 40vh;
     position: relative;

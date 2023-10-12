@@ -1,84 +1,24 @@
-import styled from "styled-components"
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
-
-
-const Body = styled.div`
-    height: 50vh;
-    width: 100vw;
-`
-
-const MainContainer = styled.div`
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: 0 auto;
-    user-select: none;
-
-    h1 {
-        margin-top: 100px;
-        font-size: 50px;
-    }
-
-    .container {
-        width: 50%;
-    }
-`
-
-const UnderLine = styled.div`
-    width: 10vw;
-    height: 1px;
-    border: 1px solid black;
-`
-
-const Profile = styled.div`
-    display: flex;
-    justify-content: center;
-    background-color: #fff;
-    box-shadow: 1px 1px 8px 1px rgba(0,0,0,.25);
-    margin-top: 30px;
-    margin-bottom: 30vh;
-    
-    ul {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        padding: 20px 50px; 
-
-        li {
-            list-style:none;
-            margin-top: 15px;
-            font-family: san-serif;
-        }
-
-        img {
-            width: 2rem;
-            margin-right: 30px;
-        }
-    }
-
-    .profile {
-        width: 300px;
-        margin: 50px 20px;
-    }
-`;
-
-
+import { AboutMeStyles } from "../styles/AboutMe.styles"
 
 const AboutMe = () => {
     return (
-        <Body>
-           <MainContainer>
+        <AboutMeStyles.Body id="aboutMe">
+           <AboutMeStyles.MainContainer>
                 <h1>About Me</h1>
-                <UnderLine />
-                <Profile>
-                    
+                <AboutMeStyles.UnderLine />
+                <p>사용자 중심의 멋진 사용자 경험을 만들어내는 프론트엔드 개발자입니다.</p>
+                <p>다양한 스택을 접하며 아름답고 흥미로운 UX를 제공할수있는 개발자가 되고 싶습니다.</p>
+                <AboutMeStyles.Profile>
                     <Container className="container">
+
                         <Row>
                             <Col xs={6} md={4}>
                                 <Image className="profile"src="./myprofile.jpg" roundedCircle />
+
                             </Col>
                         </Row>
                     </Container>
@@ -88,10 +28,11 @@ const AboutMe = () => {
                         <li><img src="./myhome.png" /><span>서울 동작구</span></li>
                         <li><img src="./email.png" /><span>wop33@naver.com</span></li>
                         <li><img src="./edu.png" /><span>광주보건대학교(중퇴)</span></li>
+                        <li className="git"><img src="./git.png" /><a href="https://github.com/Eideun?tab=repositories"><span>Github</span></a></li>
                     </ul>
-                </Profile>
-           </MainContainer>
-        </Body>
+                </AboutMeStyles.Profile>
+           </AboutMeStyles.MainContainer>
+        </AboutMeStyles.Body>
     )
 }
 

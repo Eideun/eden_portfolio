@@ -1,10 +1,10 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Home from './pages/Home';
 import AboutMe from "./pages/AboutMe"
 import Nav from './components/Nav';
 import Cursor from './components/Cursor';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Effect from './components/Effect';
 
 function App() {
 
@@ -45,6 +45,8 @@ function App() {
       <div className="App" onMouseMove={handleMouseMove} onMouseDown={handleDown} onMouseUp={handleUp}>
           <Nav />
           <Home />
+          <AboutMe />
+          <Effect />
         <Cursor cursorPosition={cursorPosition} clicked={clicked} />
       </div>
 

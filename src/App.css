@@ -13,6 +13,17 @@
     src: url("./font/custom/SAOWelcomeTT-Regular.ttf") format("truetype");
   }
 
+  @font-face {
+    font-family: "NotoM";
+    src: url("./font/custom/NotoSansKR-Medium.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "NotoL";
+    src: url("./font/custom/NotoSansKR-Regular.ttf") format("truetype");
+  }
+
+  
+
   a {
     color: inherit;
     text-decoration: none;

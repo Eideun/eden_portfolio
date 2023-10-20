@@ -2,15 +2,21 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 const Up = styled.div`
-    display: ${props => (props.visible ? 'flex' : 'none')}; /* 수정: 스타일 템플릿 리터럴에 대한 오류 수정 */
-    flex-direction: row-reverse;  
-    padding-right: 80px;
-    padding-top: 350px;
+    display: ${props => (props.visible ? 'flex' : 'none')};
+    position: fixed;
+    left: 92vw;
+    top: 85vh;
+    z-index: 9999;
 
     img {
         width: 50px;
         position: fixed;
         cursor: pointer;
+    }
+
+    @media (max-width: 767px) {
+        top: 87vh;
+        left: 87vw;
     }
 `;
 

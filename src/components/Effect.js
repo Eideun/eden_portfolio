@@ -3,29 +3,32 @@ import styled from "styled-components"
 const Star = styled.div`
     display: flex;
     justify-content: space-around;
-    position: absolute;
-    z-index: -9000;
+    position: relative;
+    z-index: 9999 !important;
     margin: 0 auto;
     top: 0;
     width: 100%;
+    overflow: hidden;
+    
 
     img {
         width: 200px;
         animation: star 15s infinite linear;
         overflow: hidden;
+        z-index: 9999;
     }
 
     @keyframes star {
         0% {
             opacity: 0.3;
-            transform: translate3d(500px,1500px,0) scale(0.4);
+            transform: translate3d(0, 100%, 0) scale(0.4);
         }
         75% {
-            opacity: 0.8;
+            opacity: 0.4;
         }
         100% {
-            opacity: 1;
-            transform: translateY(0) scale(1.7);
+            opacity: 0.5;
+            transform: translateY(-100%) scale(1.7);
         }
     }
 
@@ -51,14 +54,16 @@ const Star = styled.div`
 
 const Effect = () => {
     return (
-        <Star>
-            <img id="star1" src="./star.png" />
-            <img id="star2" src="./star.png" />
-            <img id="star3" src="./star.png" />
-            <img id="star4" src="./star.png" />
-            <img id="star5" src="./star.png" />
-            <img id="star6" src="./star.png" />
-        </Star>
+        <div>
+            <Star>
+                <img id="star1" src="./star.png" />
+                <img id="star2" src="./star.png" />
+                <img id="star3" src="./star.png" />
+                <img id="star4" src="./star.png" />
+                <img id="star5" src="./star.png" />
+                <img id="star6" src="./star.png" />
+            </Star>
+        </div>
     )
 }
 

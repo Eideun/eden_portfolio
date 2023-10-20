@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import './App.css';
+import Header from './components/Header';
 import Home from './pages/Home';
-import AboutMe from "./pages/AboutMe"
-import Nav from './components/Nav';
 import Cursor from './components/Cursor';
-import Effect from './components/Effect';
+import AboutMe from './pages/AboutMe';
+import Stacks from './pages/Stacks';
+import Project from "./pages/Project"
+
 
 function App() {
 
@@ -42,12 +44,14 @@ function App() {
 
 
   return (
+    
       <div className="App" onMouseMove={handleMouseMove} onMouseDown={handleDown} onMouseUp={handleUp}>
-          <Nav />
-          <Home />
-          <AboutMe />
-          <Effect />
-        <Cursor cursorPosition={cursorPosition} clicked={clicked} />
+            <Header />
+            <Home />
+            <AboutMe />
+            <Stacks />
+            <Project />
+            <Cursor cursorPosition={cursorPosition} clicked={clicked} />
       </div>
 
   );

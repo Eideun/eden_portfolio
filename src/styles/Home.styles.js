@@ -1,110 +1,140 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 const Container = styled.div`
-  width: 100vw;
-  height: 100vh;
-  background: #141414;
-
-  .message {
-    top: 93vh;
-    left: 49vw;
-    position: absolute;
-    color: white;
-    font-size: 20px;
-    letter-spacing: 1.2px;
-    opacity: 0.8;
-    user-select: none;
-    margin-left: 15px;
-  }
-
-`;
-
-const Title = styled.div`
+  min-width: 100%;
+  min-height: 100vh;
   display: flex;
-  margin: 0 auto;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  
-  h1 {
-    margin-top: 40vh;
-    position: relative;
-    font-size: 40px;
-    overflow: hidden;
-    white-space: nowrap;
-    animation: typing 1000s steps(18000, end);
-    font-size: 50px;
-    pointer-events: none;
-    user-select: none;
-
-    &::after {
-      content: '|';
-      position: absolute;
-      top: -0.2rem;
-      animation: blink 1.2s infinite;
-    }
-  }
-
-  @keyframes typing {
-    from { width: 0% }
-    to { width: 10000% }
-  }
-
-  @keyframes blink {
-    0%, 100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
-  }
-
-  @media (max-width: 800px) {
-    h1 {
-      font-size: 30px;
-      margin-top: 50px;
-      transition: transform 0.4s ease;
-    }
-    
-    justify-content: center;
-  }
+  background: #141414;
 `;
 
-const Scroll = styled.div`
-position: absolute;
-width: 35px;
-height: 35px;
-top: 90vh;
-left: 50vw;
-background-image: url("./scroll.png");
-background-size: 35px 35px;
-filter: invert(100%);
-animation: scrolldown 1300ms linear infinite;
+const NavWrapper = styled.div`
+  min-width: 250px;
+  min-height: 100%;
+  display: flex;
 
-  @keyframes scrolldown {
-    0% {
-      top: 86vh;
-      opacity: 0;
+  @media(max-width: 767px) {
+      display: none;
+  }
+`
+
+const TitleWrapper = styled.div`
+display: flex;
+justify-content: center;
+margin: 0 auto;
+height: 60px;
+align-items: center;
+margin-top: 46vh;
+padding-right: 5%;
+
+h1 {
+  font-size: 48px
+}
+
+@media (max-width: 767px)  {
+  padding-right: 0px;
+
+  h1 {
+    font-size: 22px;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px)  {
+  padding-right: 0px;
+  h1 {
+    font-size: 36px;
+  }
+}
+
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 3s linear infinite;
+  display: inline-block;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+`
+
+const BallWrapper = styled.div`
+  display: flex;
+  position: absolute;
+  top: -100vh;
+
+  @media(max-width: 767px) {
+    display: none;
+  }
+`
+
+const Ball1 = styled.div`
+  width: 800px;
+  height: 800px;
+  border-radius: 50%;
+  background-color: #fff;
+  animation: ball1-1 3s linear infinite alternate;
+  opacity: 0.2;
+
+  @keyframes ball1-1 {
+  0% {
+      transform: translate3d(120%, 180%,0)
   }
   50% {
-      top: 88vh;
-      opacity: 0.5;
+    transform: translate3d(130%, 170%,0);
   }
   100% {
-      top: 90vh;
-      opacity: 0;
+    transform: translate3d(140%, 160%,0);
   }
   }
 `
 
+const Ball2 = styled.div`
+  width: 800px;
+  height: 800px;
+  border-radius: 50%;
+  background-color: #fff;
+  animation: ball1-2 3s linear infinite alternate;
+  opacity: 0.4;
+
+  @keyframes ball1-2 {
+  0% {
+      transform: translate3d(100%, 140%,0)
+  }
+  50% {
+    transform: translate3d(90%, 130%,0);
+  }
+  100% {
+    transform: translate3d(80%, 120%,0);
+  }
+  }
+`
+
+
+
+
 export const HomeStyles = {
   Container,
-  Title,
-  Scroll1:styled(Scroll)`
-  animation: scrolldown 1300ms 650ms linear infinite;
-    animation-fill-mode: backwards;
-  `,
-  Scroll2:styled(Scroll)`
-  animation: scrolldown 1300ms linear infinite;
-  `
-};
+  TitleWrapper,
+  NavWrapper,
+  BallWrapper,
+  Ball1,
+  Ball2
+}

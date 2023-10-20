@@ -22,7 +22,9 @@
     src: url("./font/custom/NotoSansKR-Regular.ttf") format("truetype");
   }
 
-  
+  * {
+    box-sizing: border-box;
+}
 
   a {
     color: inherit;
@@ -38,8 +40,8 @@
   }
   
   .App {
-    font-family: "fontMedium";
-    min-width: 800px;
+    font-family: "fontMedium", "NotoM";
+    user-select: none;
     cursor: none;
   }
 

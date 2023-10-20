@@ -14,6 +14,11 @@ const Cursor = styled.div`
     left: ${(props) => `${props.cursorPosition.left - 10}px`};
     top: ${(props) => `${props.cursorPosition.top - 10}px`};
     z-index: 9999;
+
+    @media(max-width: 767px) {
+        width: 7px;
+        height: 7px;
+    }
 `;
 ;
 

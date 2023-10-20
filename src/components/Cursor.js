@@ -1,5 +1,5 @@
 import React from 'react';
-import { Cursor, CursorWrapper } from "../styles/Cursor.styles"
+import { Cursor } from "../styles/Cursor.styles"
 
 const CustomCursor = ({ cursorPosition, clicked }) => {
     return (

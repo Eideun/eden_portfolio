@@ -1,38 +1,50 @@
+import { AboutMeStyles } from "../styles/AboutMe.styles"
 import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
-import { AboutMeStyles } from "../styles/AboutMe.styles"
 
 const AboutMe = () => {
     return (
-        <AboutMeStyles.Body id="aboutMe">
-           <AboutMeStyles.MainContainer>
-                <h1>About Me</h1>
-                <AboutMeStyles.UnderLine />
-                <p>사용자 중심의 멋진 사용자 경험을 만들어내는 프론트엔드 개발자입니다.</p>
-                <p>다양한 스택을 접하며 아름답고 흥미로운 UX를 제공할수있는 개발자가 되고 싶습니다.</p>
-                <AboutMeStyles.Profile>
-                    <Container className="container">
-
-                        <Row>
-                            <Col xs={6} md={4}>
-                                <Image className="profile"src="./myprofile.jpg" roundedCircle />
-
-                            </Col>
+        <div id="about-me">
+            <AboutMeStyles.Container>
+                <AboutMeStyles.TitleWrapper>
+                    <h2>
+                        <span>A</span>
+                        <span>b</span>
+                        <span>o</span>
+                        <span>u</span>
+                        <span>t</span>
+                        <span> </span>
+                        <span>M</span>
+                        <span>e</span>
+                    </h2>
+                    <AboutMeStyles.UnderLine />
+                </AboutMeStyles.TitleWrapper>
+                <AboutMeStyles.ContentsWrapper>
+                    <AboutMeStyles.Introduce>
+                        <Row className="row">
+                           <Col xs={6} md={4}>
+                              <Image className="profile"src="./myprofile.jpg" roundedCircle alt="profile"/>
+                           </Col>
                         </Row>
-                    </Container>
-                    <ul>
-                        <li><img src="./name.png" /><span>유이든</span></li>
-                        <li><img src="./birth.png" /><span>93.06.22</span></li>
-                        <li><img src="./myhome.png" /><span>서울 동작구</span></li>
-                        <li><img src="./email.png" /><span>wop33@naver.com</span></li>
-                        <li><img src="./edu.png" /><span>광주보건대학교(중퇴)</span></li>
-                        <li className="git"><img src="./git.png" /><a href="https://github.com/Eideun?tab=repositories"><span>Github</span></a></li>
-                    </ul>
-                </AboutMeStyles.Profile>
-           </AboutMeStyles.MainContainer>
-        </AboutMeStyles.Body>
+                        <AboutMeStyles.Mention>
+                            <span>새로운 시도를 두려워하지 않는 주니어 개발자입니다.</span>
+                            <span>남들보다 늦게 시작한 만큼 멈추지 않고</span>
+                            <span>끊임없이 발전해 나가는 모습 보여드리겠습니다!</span>
+                        </AboutMeStyles.Mention>
+                    </AboutMeStyles.Introduce>
+                    <AboutMeStyles.Profile>
+                        <ul>
+                            <li><img src="./name.png" alt="name"/><span>유이든</span></li>
+                            <li><img src="./birth.png" alt="birth"/><span>93.06.22</span></li>
+                            <li><img src="./address.png" alt="address"/><span>서울 동작구</span></li>
+                            <li><img src="./email.png" alt="email"/><span>wop33@naver.com</span></li>
+                            <li><img src="./edu.png" alt="edu"/><span>광주보건대학교(중퇴)</span></li>
+                        </ul>
+                    </AboutMeStyles.Profile>
+                </AboutMeStyles.ContentsWrapper>
+            </AboutMeStyles.Container>
+        </div>
     )
 }
 

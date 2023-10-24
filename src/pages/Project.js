@@ -74,6 +74,8 @@ const Project = () => {
                         <ProjectStyles.Intro>
                             <Carousel showThumbs={false} showStatus={true} statusFormatter={(current, total) => `${current} / ${total}`}>
                                 <img src="./portfolio.jpg" alt="Portfolio" />
+                                <img src="./portfolio2.jpg" alt="Portfolio" />
+                                <img src="./portfolio3.jpg" alt="Portfolio" />
                             </Carousel>
                         </ProjectStyles.Intro>
                         <ProjectStyles.Description>
@@ -107,7 +109,8 @@ const Project = () => {
                                     <span className="list">기술스택</span>
                                 </div>
                                 <div>
-                                    <span className="stacks">React, react-scroll, styled-compontnts, Web Audio API</span>
+                                    <span className="stacks">React,styled-compontnts,
+                                    Web Audio API</span>
                                 </div>
                             </ProjectStyles.Detail>
                             <ProjectStyles.Detail2>

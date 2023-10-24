@@ -203,6 +203,11 @@ const Detail2 = styled.div`
         margin-top: 5px;
     }
 
+    .stacks {
+        display: flex;
+        justify-content: flex-start;
+    }
+
     @media(max-width: 767px) {
         width: 100vw;
         margin: 0;

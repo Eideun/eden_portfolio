@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f3ebd992.css",
+    "main.js": "/static/js/main.94219467.js",
+    "static/js/787.74c4ecdb.chunk.js": "/static/js/787.74c4ecdb.chunk.js",
+    "static/media/NotoSansKR-Regular.ttf": "/static/media/NotoSansKR-Regular.9bc92a36ed81392f698b.ttf",
+    "static/media/NotoSansKR-Medium.ttf": "/static/media/NotoSansKR-Medium.b9d6e1b3e7a3d63546cc.ttf",
+    "static/media/SAOWelcomeTT-Regular.ttf": "/static/media/SAOWelcomeTT-Regular.a0487c318e2adcbabf8c.ttf",
+    "static/media/SAOUITT-Regular.ttf": "/static/media/SAOUITT-Regular.df1c03a8c5b89a1a9ca4.ttf",
+    "static/media/SAOUITT-Bold.ttf": "/static/media/SAOUITT-Bold.492aa470b223c2cbd1eb.ttf",
+    "index.html": "/index.html",
+    "main.f3ebd992.css.map": "/static/css/main.f3ebd992.css.map",
+    "main.94219467.js.map": "/static/js/main.94219467.js.map",
+    "787.74c4ecdb.chunk.js.map": "/static/js/787.74c4ecdb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f3ebd992.css",
+    "static/js/main.94219467.js"
+  ]
+}

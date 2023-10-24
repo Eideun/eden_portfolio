@@ -30,14 +30,20 @@ const Header = () => {
                 </Link>
                 <Link to="about-me" smooth={true} duration={200}>
                     <span   className={selectedMenu === 1 ? 'selected' : ''}
-        onClick={() => handleMenuClick(1)}>About Me</span>
+                     onClick={() => handleMenuClick(1)}>About Me</span>
                 </Link>
+                <Link to="stacks" smooth={true} duration={200}>
                     <span   className={selectedMenu === 2 ? 'selected' : ''}
         onClick={() => handleMenuClick(2)}>Stacks</span>
+                </Link>
+        <Link to="project" smooth={true} duration={200}>
                     <span   className={selectedMenu === 3 ? 'selected' : ''}
         onClick={() => handleMenuClick(3)}>Project</span>
+        </Link>
+        <Link to="Contact" smooth={true} duration={200}>
                     <span   className={selectedMenu === 4 ? 'selected' : ''}
         onClick={() => handleMenuClick(4)}>Contact</span>
+        </Link>
                 </HeaderStyles.MenuWrapper>
             </HeaderStyles.Container>
         </div>

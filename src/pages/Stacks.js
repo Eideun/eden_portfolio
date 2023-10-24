@@ -2,25 +2,26 @@ import { StacksStyles } from "../styles/Stacks.styles";
 import React,{ useEffect, useRef } from "react";
 
 const Stacks = () => {
-    const containerRef = useRef(null);
+  const currentIndex = useRef(0); // useRef를 사용하여 currentIndex 선언
 
-    const colors = ["#f9f9f9", "#5733FF", "#eee"];
-    let currentIndex = 0;
-  
-    useEffect(() => {
+  useEffect(() => {
       const container = containerRef.current;
-  
-      const changeBackgroundColor = () => {
-        currentIndex = (currentIndex + 1) % colors.length;
-        const newColor = colors[currentIndex];
-        container.style.setProperty("--bg-color", newColor);
-      };
-  
-      const intervalId = setInterval(changeBackgroundColor, 6000);
-  
-      return () => clearInterval(intervalId);
-    }, []);
 
+      const colors = ["#f9f9f9", "#5733FF", "#eee"];
+
+      const changeBackgroundColor = () => {
+          currentIndex.current = (currentIndex.current + 1) % colors.length;
+          const newColor = colors[currentIndex.current];
+          container.style.setProperty("--bg-color", newColor);
+      };
+
+      const intervalId = setInterval(changeBackgroundColor, 6000);
+
+      return () => clearInterval(intervalId);
+  }, []);
+
+  const containerRef = useRef(null);
+  
   return (
     <div id="stacks">
       <StacksStyles.Container ref={containerRef}>

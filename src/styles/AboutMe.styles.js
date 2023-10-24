@@ -150,7 +150,7 @@ const Introduce = styled.div`
 const Mention = styled.div`
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: 350px;
     letter-spacing: 1px;
     margin-top: 30px;
     font-weight: 500;

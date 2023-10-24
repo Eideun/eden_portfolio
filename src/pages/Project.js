@@ -1,224 +1,132 @@
-import styled from "styled-components"
-import Card from 'react-bootstrap/Card';
+import { ProjectStyles } from "../styles/Project.styles"
 import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-
-
-const Container = styled.div`
-display: flex;
-justify-content: center;
-width: 100%;
-height: 100%;
-flex-direction: column;
-overflow0x: hidden;
-background: #1d809f;
-padding-bottom: 100px;
-
-@media(max-width: 767px) {
-  width: 100vw;
-}
-`
-
-const Title = styled.div`
-display: flex;
-justify-content: center;
-flex-direction: column;
-margin: 100px auto 0;
-height: 60px;
-align-items: center;
-width: 100%;
-min-width: 100%;
-z-index: 9998;
--webkit-font-smoothing: antialiased;
-
-h2 {
-  color: white;
-  font-size: 2.7rem;
-  font-weight: 900;
-  letter-spacing: 5px;
-}
-`
-
-const CardBody = styled(Card)`
-    width: 1000px;
-    height: 800px;
-    display: flex;
-    flex-direction: column;
-    margin: 50px auto;
-    padding: 20px 0;    
-`
-
-const SubTitle = styled.div`
-    margin: 30px auto;
-
-    h3 {
-        font-family: NotoM;
-        font-size: 36px;
-        font-weight: 700;
-    }
-`
-
-const ProjectInfo = styled.div`
-    display: flex;
-    padding-left: 50px;
-    width: 100%;
-    height: 100%;
-    padding: 0 50px;
-`
-
-const Intro = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-
-    img {
-        max-height: 90%; 
-    }
-
-    .carousel .dot {
-        width: 15px;
-        height: 15px;
-        background-color: gray;
-    }
-
-    .carousel .dot.selected {
-        background-color: black;
-    }
-
-    control-arrow.control-next {
-        background:blue;
-        padding: 10px;
-    }
-
-    .carousel-status {
-        font-size: 16px;
-        color: black;
-    }
-`
-
-const Description = styled.div`
-    width: 60%;
-    height: 100%;
-    padding: 40px 40px 0 0;
-    margin-left: 40px;
-
-    img {
-        width: 20px;
-        height: 20px;
-    }
-
-    span {
-        margin-left: 14px;
-    }
-`
-
-const UnderLine = styled.div`
-padding-bottom: 1rem;
-margin-bottom: 1rem;
-border-bottom: 1px solid #ccc;
-font-weight: 400;
-font-size: 1rem;
-`
-
-const Detail = styled.div`
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-    font-family: NotoM;
-
-    span {
-        font-size: 14px;
-    }
-
-    .list {
-        font-size: 18px;
-    }
-
-    a {
-        font-size: 8px;
-        font-family: san-serif;
-        text-align: left;
-        color: blue;
-        text-decoration: underline;
-    }
-
-    .stacks {
-        font-size: 16px;
-    }
-
-`
-
-const Detail2 = styled.div`
-    display: flex;
-    align-items: flex-start;
-    margin-top: 20px;
-    font-family: NotoM;
-
-    span {
-        font-size: 18px;
-    }
-
-    img {
-        margin-top: 5px;
-    }
-`
 
 const Project = () => {
     return (
-        <div>
-            <Container>
-                <Title>
+        <div id="project">
+            <ProjectStyles.Container>
+                <ProjectStyles.Title>
                     <h2>Project</h2>
-                </Title>
-                <CardBody>
-                    <SubTitle><h3>WonderLand</h3></SubTitle>
-                    <ProjectInfo>                    
-                        <Intro>
+                </ProjectStyles.Title>
+                <ProjectStyles.CardBody>
+                    <ProjectStyles.SubTitle><h3>WonderLand</h3></ProjectStyles.SubTitle>
+                    <ProjectStyles.ProjectInfo>                    
+                        <ProjectStyles.Intro>
                             <Carousel showThumbs={false} showStatus={true} statusFormatter={(current, total) => `${current} / ${total}`}>
                                 <img src="./wonderland.jpg" alt="Wonderland" />
                                 <img src="./cart.jpg" alt="cart" />
                                 <img src="./payment.jpg" alt="payment" />
                                 <img src="./mypage.jpg" alt="my-page" />
                             </Carousel>
-                        </Intro>
-                        <Description>
+                        </ProjectStyles.Intro>
+                        <ProjectStyles.Description>
                             <p>아동용 도서 판매를 하는 온라인 쇼핑몰입니다.</p>
                             <p>처음 진행해보는 팀 프로젝트로 팀원들과의 협업 과정, 기획 등 많은 것을 배울수 있었습니다.</p>
                             <p>팀원들과 역할 분담을 하여<br></br> 마이페이지, 장바구니, 결제화면 페이지를 담당하였으며
                                 담당한 페이지의 UX /UI구성, 와이어 프레이밍까지 직접 디자인 하였습니다.</p>
-
-                            <UnderLine />
-                            <Detail>
-                                <img src="./check.png" alt="check"/>
-                                <span className="list">GitHub</span>
-                                <a href="https://github.com/Eideun/Wonderland"><span>https://github.com/Eideun/Wonderland</span></a>
-                            </Detail>
-                            <Detail>
-                                <img src="./check.png" alt="check"/>
-                                <span className="list">URL</span>
-                                <a href="https://64b149b4216c5613554b1f18--lucky-creponne-adbfde.netlify.app/"><span>https://64b149b4216c5613554b1f18.app</span></a>
-                            </Detail>
-                            <Detail>
-                                <img src="./check.png" alt="check"/>
-                                <span className="list">기술스택</span>
-                                <span className="stacks">HTML5, CSS3, JavaScript, Bulma</span>
-                            </Detail>
-                            <Detail2>
-                                <img src="./check.png" alt="check"/>
-                                <span className="list">담당 업무</span>
-                                <ul>
-                                    <li>HTML 마크업</li>
-                                    <li>CSS 스타일링</li>
-                                    <li>DOM 조작, 이벤트 핸들링, API통신 등</li>
-                                </ul>
-                            </Detail2>
-                        </Description>
-                    </ProjectInfo>
-                </CardBody>
-              
-            </Container>
+                            <ProjectStyles.UnderLine />
+                            <ProjectStyles.Detail>
+                                <div className="margin">
+                                    <img src="./check.png" alt="check"/>
+                                    <span className="list">GitHub</span>
+                                </div>
+                                <div>
+                                    <a href="https://github.com/Eideun/Wonderland"><span>https://github.com/Eideun/Wonderland</span></a>
+                                </div>
+                            </ProjectStyles.Detail>
+                            <ProjectStyles.Detail>
+                                <div className="margin">
+                                    <img src="./check.png" alt="check"/>
+                                    <span className="list">URL</span>
+                                </div>
+                                <div>
+                                    <a href="https://64b149b4216c5613554b1f18--lucky-creponne-adbfde.netlify.app/"><span>https://64b149b4216c5613554b1f18.app</span></a>
+                                </div>
+                            </ProjectStyles.Detail>
+                            <ProjectStyles.Detail>
+                                <div className="margin">
+                                    <img src="./check.png" alt="check"/>
+                                    <span className="list">기술스택</span>
+                                </div>
+                                <div>
+                                    <span className="stacks">HTML5, CSS3, JavaScript, Bulma</span>
+                                </div>
+                            </ProjectStyles.Detail>
+                            <ProjectStyles.Detail2>
+                                <div className="margin">
+                                    <img src="./check.png" alt="check"/>
+                                    <span className="list">담당 업무</span>
+                                </div>
+                                <div>
+                                    <ul>
+                                        <li>HTML 마크업</li>
+                                        <li>CSS 스타일링</li>
+                                        <li>DOM 조작, 이벤트 핸들링, API통신 등</li>
+                                    </ul>
+                                </div>
+                            </ProjectStyles.Detail2>
+                        </ProjectStyles.Description>
+                    </ProjectStyles.ProjectInfo>
+                </ProjectStyles.CardBody>
+                <ProjectStyles.CardBody>
+                    <ProjectStyles.SubTitle><h3>Eden's Portfolio</h3></ProjectStyles.SubTitle>
+                    <ProjectStyles.ProjectInfo>                    
+                        <ProjectStyles.Intro>
+                            <Carousel showThumbs={false} showStatus={true} statusFormatter={(current, total) => `${current} / ${total}`}>
+                                <img src="./portfolio.jpg" alt="Portfolio" />
+                            </Carousel>
+                        </ProjectStyles.Intro>
+                        <ProjectStyles.Description>
+                            <p>포트폴리오 용도로 제작한 웹사이트로 지금 보고계시는 웹사이트입니다.</p>
+                            <p>순수 React로 개발한 반응형 웹사이트입니다. <br></br>
+                            개발 과정에서 기초적인 UX/UI 디자인, 다양한 CSS용법에 대해 다시 학습할수 있었고, <br></br>
+                            Web Audio API를 이용하여 메뉴 click, hover 사운드를 추가하였습니다.</p>
+                            <p>또 github를 이용하여 첫 웹사이트 호스팅 및 배포 경험을 할수 있었습니다.</p>
+                            <ProjectStyles.UnderLine />
+                            <ProjectStyles.Detail>
+                                <div className="margin">
+                                    <img src="./check.png" alt="check"/>
+                                    <span className="list">GitHub</span>
+                                </div>
+                                <div>
+                                    <a href="https://github.com/Eideun/eden_portfolio"><span>https://github.com/Eideun/eden_portfolio</span></a>
+                                </div>
+                            </ProjectStyles.Detail>
+                            <ProjectStyles.Detail>
+                                <div className="margin">
+                                    <img src="./check.png" alt="check"/>
+                                    <span className="list">URL</span>
+                                </div>
+                                <div>
+                                    <a href="https://eideun.github.io/eden_portfolio/"><span>https://eideun.github.io/eden_portfolio</span></a>
+                                </div>
+                            </ProjectStyles.Detail>
+                            <ProjectStyles.Detail>
+                                <div className="margin">
+                                    <img src="./check.png" alt="check"/>
+                                    <span className="list">기술스택</span>
+                                </div>
+                                <div>
+                                    <span className="stacks">React, react-scroll, styled-compontnts, Web Audio API</span>
+                                </div>
+                            </ProjectStyles.Detail>
+                            <ProjectStyles.Detail2>
+                                <div className="margin">
+                                    <img src="./check.png" alt="check"/>
+                                    <span className="list">담당 업무</span>
+                                </div>
+                                <div>
+                                    <ul>
+                                        <li>UI/UX 디자인 구현(Figma)</li>
+                                        <li>컴포넌트 개발</li>
+                                        <li>호스팅 및 배포(github)</li>
+                                    </ul>
+                                </div>
+                            </ProjectStyles.Detail2>
+                        </ProjectStyles.Description>
+                    </ProjectStyles.ProjectInfo>
+                </ProjectStyles.CardBody>     
+            </ProjectStyles.Container>
         </div>
     )
 }

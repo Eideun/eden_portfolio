@@ -107,8 +107,8 @@ export const NavStyles = {
     MenuWrapper,
     Menu1: styled(MenuBase)`
     top: ${(props) => (props.menuVisible ? "0" : "-600px")};
-    left: ${(props) => (props.activeMenus.menu1 ? "15px" : "0")};
-    background: ${(props) => (props.activeMenus.menu1 ? "#F6A201" : "#E3EAF4")};
+    left: ${(props) => (props.activemenus.menu1 ? "15px" : "0")};
+    background: ${(props) => (props.activemenus.menu1 ? "#F6A201" : "#E3EAF4")};
     transition: ${(props) =>
       props.menuVisible
         ? "top 0.75s ease-in-out"
@@ -117,8 +117,8 @@ export const NavStyles = {
   
   Menu2: styled(MenuBase)`
     top: ${(props) => (props.menuVisible ? "0" : "-600px")};
-    left: ${(props) => (props.activeMenus.menu2 ? "15px" : "0")};
-    background: ${(props) => (props.activeMenus.menu2 ? "#F6A201" : "#E3EAF4")};
+    left: ${(props) => (props.activemenus.menu2 ? "15px" : "0")};
+    background: ${(props) => (props.activemenus.menu2 ? "#F6A201" : "#E3EAF4")};
     transition: ${(props) =>
       props.menuVisible
         ? "top 0.6s ease-in-out"
@@ -127,8 +127,8 @@ export const NavStyles = {
 
   Menu3: styled(MenuBase)`
     top: ${(props) => (props.menuVisible ? "0" : "-600px")};
-    left: ${(props) => (props.activeMenus.menu3 ? "15px" : "0")};
-    background: ${(props) => (props.activeMenus.menu3 ? "#F6A201" : "#E3EAF4")};
+    left: ${(props) => (props.activemenus.menu3 ? "15px" : "0")};
+    background: ${(props) => (props.activemenus.menu3 ? "#F6A201" : "#E3EAF4")};
     transition: ${(props) =>
       props.menuVisible
         ? "top 0.45s ease-in-out"
@@ -137,8 +137,8 @@ export const NavStyles = {
 
   Menu4: styled(MenuBase)`
     top: ${(props) => (props.menuVisible ? "0" : "-600px")};
-    left: ${(props) => (props.activeMenus.menu4 ? "15px" : "0")};
-    background: ${(props) => (props.activeMenus.menu4 ? "#F6A201" : "#E3EAF4")};
+    left: ${(props) => (props.activemenus.menu4 ? "15px" : "0")};
+    background: ${(props) => (props.activemenus.menu4 ? "#F6A201" : "#E3EAF4")};
     transition: ${(props) =>
       props.menuVisible
         ? "top 0.3s ease-in-out"
@@ -147,8 +147,8 @@ export const NavStyles = {
 
   Menu5: styled(MenuBase)`
     top: ${(props) => (props.menuVisible ? "0" : "-600px")};
-    left: ${(props) => (props.activeMenus.menu5 ? "15px" : "0")};
-    background: ${(props) => (props.activeMenus.menu5 ? "#F6A201" : "#E3EAF4")};
+    left: ${(props) => (props.activemenus.menu5 ? "15px" : "0")};
+    background: ${(props) => (props.activemenus.menu5 ? "#F6A201" : "#E3EAF4")};
     transition: ${(props) =>
       props.menuVisible
         ? "top 0.15s ease-in-out"

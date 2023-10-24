@@ -11,7 +11,7 @@ const Nav = () => {
       });
     
       const [menuVisible, setMenuVisible] = useState(false);
-      const [activeMenus, setActiveMenus] = useState({
+      const [activemenus, setActivemenus] = useState({
         menu1: false,
         menu2: false,
         menu3: false,
@@ -39,7 +39,7 @@ const Nav = () => {
         setMenuVisible(prev => !prev);
     
         if(!menuVisible) {
-          setActiveMenus((prev) => ({
+          setActivemenus((prev) => ({
             ...prev,
             menu1: false,
             menu2: false,
@@ -67,7 +67,7 @@ const Nav = () => {
             }));
           }, 300);
         }
-        setActiveMenus((prev) => ({
+        setActivemenus((prev) => ({
           ...Object.fromEntries(Object.keys(prev).map((key) => [key, key === menu])),
         }));
       };
@@ -102,20 +102,20 @@ const Nav = () => {
                 </NavStyles.LogoWrapper>
                 <NavStyles.MenuWrapper>
                   <Link to="home" smooth={true} duration={200}>
-                     <NavStyles.Menu1 onClick={() => handleClicked('menu1')} onMouseEnter={handleHover} menuVisible={menuVisible} activeMenus={activeMenus}>
+                     <NavStyles.Menu1 onClick={() => handleClicked('menu1')} onMouseEnter={handleHover} menuVisible={menuVisible} activemenus={activemenus}>
                      <img src="./myhome.png" alt="home"/>Home</NavStyles.Menu1>
                   </Link>
                   <Link to="about-me" smooth={true} duration={200}>       
-                        <NavStyles.Menu2 onClick={() => handleClicked('menu2')} onMouseEnter={handleHover} menuVisible={menuVisible} activeMenus={activeMenus}>
+                        <NavStyles.Menu2 onClick={() => handleClicked('menu2')} onMouseEnter={handleHover} menuVisible={menuVisible} activemenus={activemenus}>
                             <img src="./aboutme.ico" alt="aboutme"/>About Me</NavStyles.Menu2 >
                   </Link>    
                   <Link to="stacks" smooth={true} duration={200}>
-                        <NavStyles.Menu3 onClick={() => handleClicked('menu3')} onMouseEnter={handleHover} menuVisible={menuVisible} activeMenus={activeMenus}>
+                        <NavStyles.Menu3 onClick={() => handleClicked('menu3')} onMouseEnter={handleHover} menuVisible={menuVisible} activemenus={activemenus}>
                             <img src="./stacks.ico" alt="stacks"/>Stacks</NavStyles.Menu3>
                   </Link>
-                        <NavStyles.Menu4 onClick={() => handleClicked('menu4')} onMouseEnter={handleHover} menuVisible={menuVisible} activeMenus={activeMenus}>
+                        <NavStyles.Menu4 onClick={() => handleClicked('menu4')} onMouseEnter={handleHover} menuVisible={menuVisible} activemenus={activemenus}>
                             <img src="./works.ico" alt="works"/>Project</NavStyles.Menu4>
-                        <NavStyles.Menu5 onClick={() => handleClicked('menu5')} onMouseEnter={handleHover} menuVisible={menuVisible} activeMenus={activeMenus}>
+                        <NavStyles.Menu5 onClick={() => handleClicked('menu5')} onMouseEnter={handleHover} menuVisible={menuVisible} activemenus={activemenus}>
                             <img src="./contact.ico" alt="contact"/>Contact</NavStyles.Menu5>
                 </NavStyles.MenuWrapper>
             </NavStyles.Container>

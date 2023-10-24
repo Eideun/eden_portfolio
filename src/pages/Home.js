@@ -12,8 +12,8 @@ const Home = () => {
             <Nav />
           </HomeStyles.NavWrapper>  
             <HomeStyles.TitleWrapper>
-              <div class="col-md-12 text-center">
-                <h1 class="animate-charcter">FE개발자 유이든의 Portfolio 입니다.</h1>
+              <div className="col-md-12 text-center">
+                <h1 className="animate-charcter">FE개발자 유이든의 Portfolio 입니다.</h1>
               </div>
             </HomeStyles.TitleWrapper>
             <UpButton />

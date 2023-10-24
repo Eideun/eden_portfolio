@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/eden_portfolio/static/css/main.8d9eba7d.css",
-    "main.js": "/eden_portfolio/static/js/main.7b504272.js",
+    "main.js": "/eden_portfolio/static/js/main.a114f716.js",
     "static/js/787.74c4ecdb.chunk.js": "/eden_portfolio/static/js/787.74c4ecdb.chunk.js",
     "static/media/NotoSansKR-Regular.ttf": "/eden_portfolio/static/media/NotoSansKR-Regular.9bc92a36ed81392f698b.ttf",
     "static/media/NotoSansKR-Medium.ttf": "/eden_portfolio/static/media/NotoSansKR-Medium.b9d6e1b3e7a3d63546cc.ttf",
@@ -10,11 +10,11 @@
     "static/media/SAOUITT-Bold.ttf": "/eden_portfolio/static/media/SAOUITT-Bold.492aa470b223c2cbd1eb.ttf",
     "index.html": "/eden_portfolio/index.html",
     "main.8d9eba7d.css.map": "/eden_portfolio/static/css/main.8d9eba7d.css.map",
-    "main.7b504272.js.map": "/eden_portfolio/static/js/main.7b504272.js.map",
+    "main.a114f716.js.map": "/eden_portfolio/static/js/main.a114f716.js.map",
     "787.74c4ecdb.chunk.js.map": "/eden_portfolio/static/js/787.74c4ecdb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8d9eba7d.css",
-    "static/js/main.7b504272.js"
+    "static/js/main.a114f716.js"
   ]
 }

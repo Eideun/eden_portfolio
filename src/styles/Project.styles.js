@@ -82,7 +82,7 @@ const Intro = styled.div`
     width: 50%;
 
     img {
-        max-height: 90%; 
+        height: 90%; 
     }
 
     .carousel .dot {
@@ -197,10 +197,6 @@ const Detail2 = styled.div`
 
     span {
         font-size: 18px;
-    }
-
-    img {
-        margin-top: 5px;
     }
 
     .stacks {

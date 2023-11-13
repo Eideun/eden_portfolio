@@ -109,6 +109,17 @@ const Stacks = () => {
               <span>60%</span>
             </StacksStyles.Percentage>
           </StacksStyles.Bar>
+          <StacksStyles.Bar>
+            <StacksStyles.BarTag>
+              <span>SvelteKit</span>
+            </StacksStyles.BarTag>
+            <StacksStyles.BarFlex>
+              <StacksStyles.BarFill style={{ width: "50%" }} />
+            </StacksStyles.BarFlex>
+            <StacksStyles.Percentage>
+              <span>50%</span>
+            </StacksStyles.Percentage>
+          </StacksStyles.Bar>
         </StacksStyles.Wrapper>
         <StacksStyles.Section>
           <h3>#BACK-END</h3>
@@ -177,6 +188,17 @@ const Stacks = () => {
           <StacksStyles.Bar className="last">
             <StacksStyles.BarTag>
               <span>Bootstrap</span>
+            </StacksStyles.BarTag>
+            <StacksStyles.BarFlex>
+              <StacksStyles.BarFill style={{ width: "65%" }} />
+            </StacksStyles.BarFlex>
+            <StacksStyles.Percentage>
+              <span>65%</span>
+            </StacksStyles.Percentage>
+          </StacksStyles.Bar>
+          <StacksStyles.Bar className="last">
+            <StacksStyles.BarTag>
+              <span>Tailwind CSS</span>
             </StacksStyles.BarTag>
             <StacksStyles.BarFlex>
               <StacksStyles.BarFill style={{ width: "65%" }} />

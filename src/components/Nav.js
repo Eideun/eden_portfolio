@@ -113,8 +113,10 @@ const Nav = () => {
                         <NavStyles.Menu3 onClick={() => handleClicked('menu3')} onMouseEnter={handleHover} menuVisible={menuVisible} activemenus={activemenus}>
                             <img src="./stacks.ico" alt="stacks"/>Stacks</NavStyles.Menu3>
                   </Link>
+                  <Link to="project" smooth={true} duration={200}>
                         <NavStyles.Menu4 onClick={() => handleClicked('menu4')} onMouseEnter={handleHover} menuVisible={menuVisible} activemenus={activemenus}>
                             <img src="./works.ico" alt="works"/>Project</NavStyles.Menu4>
+                  </Link>
                         <NavStyles.Menu5 onClick={() => handleClicked('menu5')} onMouseEnter={handleHover} menuVisible={menuVisible} activemenus={activemenus}>
                             <img src="./contact.ico" alt="contact"/>Contact</NavStyles.Menu5>
                 </NavStyles.MenuWrapper>

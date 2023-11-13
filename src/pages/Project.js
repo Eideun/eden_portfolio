@@ -36,8 +36,7 @@ const Project = () => {
                             </ProjectStyles.Detail>
                             <ProjectStyles.Detail>
                                 <div className="margin">
-                                    <img src="./check.png" alt="check"/>
-                                    <span className="list">URL</span>
+                                    <img src="./check.png" alt="check"/> 
                                 </div>
                                 <div>
                                     <a href="https://64b149b4216c5613554b1f18--lucky-creponne-adbfde.netlify.app/"><span>https://64b149b4216c5613554b1f18.app</span></a>

@@ -45,7 +45,7 @@ const UpButton = () => {
 
     return (
         <Up visible={isVisible}>
-            <img src="./up.png" onClick={scrollUp} alt="Scroll Up" />
+            <img src={process.env.PUBLIC_URL + "/up.png"} onClick={scrollUp} alt="Scroll Up" />
         </Up>
     );
 };

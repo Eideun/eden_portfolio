@@ -6,13 +6,13 @@ const Container = styled.div`
   width: 100%;
   height: 100%;
   flex-direction: column;
-  overflow0x: hidden;
+  overflow-x: hidden;
   background-color: var(--bg-color);
   transition: background-color 6s ease;
   padding-bottom: 100px;
 
   @media(max-width: 767px) {
-    width: 100vw;
+    width: 90vw;
   }
 `;
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import { Helmet } from 'react-helmet';
 import Header from './components/Header';
 import Home from './pages/Home';
 import Cursor from './components/Cursor';
@@ -46,6 +47,9 @@ function App() {
   return (
     
       <div className="App" onMouseMove={handleMouseMove} onMouseDown={handleDown} onMouseUp={handleUp}>
+           <Helmet>
+              <title>Eden_portfolio</title>
+           </Helmet>
             <Header />
             <Home />
             <AboutMe />

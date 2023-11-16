@@ -6,6 +6,7 @@ const Container = styled.div`
     user-select: none;
     left: 50px;
     top: 30px;
+    z-index: 9999;
 `
 
 const LogoWrapper = styled.div`

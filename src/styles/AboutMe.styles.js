@@ -79,7 +79,7 @@ const UnderLine = styled.div`
 `
 
 const ContentsWrapper = styled.div`
-    width: 900px;
+    width: 850px;
     height: 450px;
     display: flex;
     justify-content: center;
@@ -91,7 +91,7 @@ const ContentsWrapper = styled.div`
     position: relative;
 
     @media(max-width: 767px) {
-        width: 80vw;
+        width: 75vw;
         flex-direction: column;
         margin-bottom: 0;
         height: 100%;
@@ -103,13 +103,13 @@ const Introduce = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 600px;
+    width: 500px;
     white-space: nowrap;
 
     .profile {
-        width: 200px;
+        width: 180px;
         margin-top: 20px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
 
         @media(max-width: 767px) {
             width: 100%;
@@ -119,10 +119,10 @@ const Introduce = styled.div`
 
     @media(max-width: 767px) {
         width: 80%;
+        margin-top: 30px;
         margin-bottom: 50px;
         align-items: center;
         margin-left: 10%;
-       
 
         .row {
             display: flex;
@@ -155,16 +155,18 @@ const Mention = styled.div`
     margin-top: 30px;
     font-weight: 500;
     line-height: 2rem;
+    
+    
+    span {
+        margin-left: 20px;
+        font-size: 14px;
+    }
 
     @media(max-width: 767px) {
         width: 100%;
         white-space: normal;
         margin: 0 auto;
         text-align: left;
-
-        span {
-            font-size: 14px;
-        }
     }
 `
 

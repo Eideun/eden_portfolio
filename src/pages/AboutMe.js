@@ -24,7 +24,7 @@ const AboutMe = () => {
                     <AboutMeStyles.Introduce>
                         <Row className="row">
                            <Col xs={6} md={4}>
-                              <Image className="profile"src="./myprofile.jpg" roundedCircle alt="profile"/>
+                              <Image className="profile"src={process.env.PUBLIC_URL + "/myprofile.jpg"} roundedCircle alt="profile"/>
                            </Col>
                         </Row>
                         <AboutMeStyles.Mention>
@@ -35,11 +35,11 @@ const AboutMe = () => {
                     </AboutMeStyles.Introduce>
                     <AboutMeStyles.Profile>
                         <ul>
-                            <li><img src="./name.png" alt="name"/><span>유이든</span></li>
-                            <li><img src="./birth.png" alt="birth"/><span>93.06.22</span></li>
-                            <li><img src="./address.png" alt="address"/><span>서울 동작구</span></li>
-                            <li><img src="./email.png" alt="email"/><span>wop33@naver.com</span></li>
-                            <li><img src="./edu.png" alt="edu"/><span>광주보건대학교(중퇴)</span></li>
+                            <li><img src={process.env.PUBLIC_URL + "/name.png"} alt="name"/><span>유이든</span></li>
+                            <li><img src={process.env.PUBLIC_URL + "/birth.png"} alt="birth"/><span>93.06.22</span></li>
+                            <li><img src={process.env.PUBLIC_URL + "/address.png"} alt="address"/><span>서울 동작구</span></li>
+                            <li><img src={process.env.PUBLIC_URL + "/email.png"} alt="email"/><span>wop33@naver.com</span></li>
+                            <li><img src={process.env.PUBLIC_URL + "/edu.png"} alt="edu"/><span>광주보건대학교(중퇴)</span></li>
                         </ul>
                     </AboutMeStyles.Profile>
                 </AboutMeStyles.ContentsWrapper>

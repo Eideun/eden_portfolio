@@ -22,7 +22,7 @@ const Nav = () => {
     
       const handleMenuClick = () => {
         if (!menuVisible) {
-          const audio = new Audio('./slideOn.mp3');
+          const audio = new Audio(`${process.env.PUBLIC_URL}/slideOn.mp3`);
           audio.play();
           audio.currentTime = 0;
           setAudioState(prevState => ({
@@ -52,7 +52,7 @@ const Nav = () => {
     
       const handleClicked = (menu) => {
         if (audioState.clicked) {
-          const audio = new Audio('./clicked.mp3');
+          const audio = new Audio(`${process.env.PUBLIC_URL}/clicked.mp3`);
           audio.play();
           audio.currentTime = 0;
           setAudioState((prevState) => ({
@@ -74,7 +74,7 @@ const Nav = () => {
     
       const handleHover = () => {
         if (audioState.clicked) {
-          const audio = new Audio('./slide.mp3');
+          const audio = new Audio(`${process.env.PUBLIC_URL}/slide.mp3`);
           audio.play();
           audio.currentTime = 0;
           setAudioState(prevState => ({
@@ -95,7 +95,7 @@ const Nav = () => {
         <div>
             <NavStyles.Container>
                 <NavStyles.LogoWrapper>
-                    <img src="./menu.png" alt="menu" onClick={handleMenuClick}/>
+                    <img src={process.env.PUBLIC_URL + "/menu.png"} alt="menu" onClick={handleMenuClick}/>
                   <Link to="home" smooth={true} duration={200}>  
                     <h2>Eden's Portfolio</h2>
                   </Link>
@@ -103,22 +103,22 @@ const Nav = () => {
                 <NavStyles.MenuWrapper>
                   <Link to="home" smooth={true} duration={200}>
                      <NavStyles.Menu1 onClick={() => handleClicked('menu1')} onMouseEnter={handleHover} menuVisible={menuVisible} activemenus={activemenus}>
-                     <img src="./myhome.png" alt="home"/>Home</NavStyles.Menu1>
+                     <img src={process.env.PUBLIC_URL + "/myhome.png"} alt="home"/>Home</NavStyles.Menu1>
                   </Link>
                   <Link to="about-me" smooth={true} duration={200}>       
                         <NavStyles.Menu2 onClick={() => handleClicked('menu2')} onMouseEnter={handleHover} menuVisible={menuVisible} activemenus={activemenus}>
-                            <img src="./aboutme.ico" alt="aboutme"/>About Me</NavStyles.Menu2 >
+                            <img src={process.env.PUBLIC_URL + "/aboutme.ico"} alt="aboutme"/>About Me</NavStyles.Menu2 >
                   </Link>    
                   <Link to="stacks" smooth={true} duration={200}>
                         <NavStyles.Menu3 onClick={() => handleClicked('menu3')} onMouseEnter={handleHover} menuVisible={menuVisible} activemenus={activemenus}>
-                            <img src="./stacks.ico" alt="stacks"/>Stacks</NavStyles.Menu3>
+                            <img src={process.env.PUBLIC_URL + "/stacks.ico"} alt="stacks"/>Stacks</NavStyles.Menu3>
                   </Link>
                   <Link to="project" smooth={true} duration={200}>
                         <NavStyles.Menu4 onClick={() => handleClicked('menu4')} onMouseEnter={handleHover} menuVisible={menuVisible} activemenus={activemenus}>
-                            <img src="./works.ico" alt="works"/>Project</NavStyles.Menu4>
+                            <img src={process.env.PUBLIC_URL + "/works.ico"} alt="works"/>Project</NavStyles.Menu4>
                   </Link>
                         <NavStyles.Menu5 onClick={() => handleClicked('menu5')} onMouseEnter={handleHover} menuVisible={menuVisible} activemenus={activemenus}>
-                            <img src="./contact.ico" alt="contact"/>Contact</NavStyles.Menu5>
+                            <img src={process.env.PUBLIC_URL + "/contact.ico"} alt="contact"/>Contact</NavStyles.Menu5>
                 </NavStyles.MenuWrapper>
             </NavStyles.Container>
         </div>       

@@ -113,6 +113,7 @@ const Ball2 = styled.div`
   background-color: #fff;
   animation: ball1-2 3s linear infinite alternate;
   opacity: 0.4;
+  overflow-x: hidden;
 
   @keyframes ball1-2 {
   0% {
